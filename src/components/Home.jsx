@@ -2,17 +2,19 @@ import React, { Component } from "react";
 import { observable, action } from "mobx";
 import { observer } from "mobx-react";
 
-import AppBar from 'material-ui/AppBar';
 import {GridList, GridTile} from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
-import RaisedButton from 'material-ui/RaisedButton';
+import Badge from 'material-ui/Badge';
 
 const styles = {
     root: {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
+    },
+    xmas: {
+        margin: '0 auto'
     },
     gridList: {
         display: 'flex',
@@ -24,17 +26,23 @@ const styles = {
         color: 'rgb(0, 188, 212)',
     },
     gif: {
-        width: '200px',
-        height: '200px'
+        width: '180px',
+        height: '180px'
     },
     gifList: {
+        margin: '0 auto',
+        paddingTop: '40px',
         display: 'flex',
         textAlign: 'center',
         width: '100%'
     },
     gifCell: {
-        width: '250px',
-        height: '250px'
+        width: '220px',
+        height: 'auto'
+    },
+    gifFont: {
+        fontFamily: 'roboto,sans-serif',
+        color: '#9E9E9E'
     }
 };
 
@@ -85,48 +93,111 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <AppBar
-                    title="ESV Bible Study"
-                    iconClassNameRight="muidocs-icon-navigation-expand-more"
-                />
-                <RaisedButton label="TEACH ME!" />
-                <GridListExampleSingleLine/>
+                <h1>Bros: 25</h1>
+                <h1>Sisters: 24</h1>
 
+                {/*<GridListExampleSingleLine/>*/}
+                {/*<div>*/}
+                    {/*<div style={styles.xmas}>*/}
+                        {/*<img style={styles.gif} src="src/images/xmas.png"/>*/}
+                        {/*<div>*/}
+                            {/*<h1 style={styles.gifFont}>Merry Christmas!</h1>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
+
+                {/* BROS */}
                 <div style={styles.gifList}>
                     <div style={styles.gifCell}>
-                        <img style={styles.gif} src="src/images/gifs/androidify-abe.gif"/>
+                        <Badge badgeContent={5} primary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-abe.gif"/>
+                        </Badge>
                         <div>
-                            <h4>ABE</h4>
+                            <h4 style={styles.gifFont}>abe</h4>
                         </div>
                     </div>
                     <div style={styles.gifCell}>
-                        <img style={styles.gif} src="src/images/gifs/androidify-jordan.gif"/>
+                        <Badge badgeContent={15} primary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-jordan.gif"/>
+                        </Badge>
                         <div>
-                            <h4>JORDAN</h4>
+                            <h4 style={styles.gifFont}>jordan</h4>
                         </div>
                     </div>
                     <div style={styles.gifCell}>
-                        <img style={styles.gif} src="src/images/gifs/androidify-joe.gif"/>
+                        <Badge badgeContent={3} primary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-joe.gif"/>
+                        </Badge>
                         <div>
-                            <h4>JOE</h4>
+                            <h4 style={styles.gifFont}>joe</h4>
                         </div>
                     </div>
                     <div style={styles.gifCell}>
-                        <img style={styles.gif} src="src/images/gifs/androidify-bj.gif"/>
+                        <Badge badgeContent={2} primary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-bj.gif"/>
+                        </Badge>
                         <div>
-                            <h4>BJ</h4>
+                            <h4 style={styles.gifFont}>bj</h4>
                         </div>
                     </div>
                     <div style={styles.gifCell}>
-                        <img style={styles.gif} src="src/images/gifs/androidify-sam.gif"/>
+                        <Badge badgeContent={5} primary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-sam.gif"/>
+                        </Badge>
                         <div>
-                            <h4>SAM</h4>
+                            <h4 style={styles.gifFont}>sam</h4>
                         </div>
                     </div>
                     <div style={styles.gifCell}>
-                        <img style={styles.gif} src="src/images/gifs/androidify-jon.gif"/>
+                        <Badge badgeContent={20} primary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-jon.gif"/>
+                        </Badge>
                         <div>
-                            <h4>JON</h4>
+                            <h4 style={styles.gifFont}>jon</h4>
+                        </div>
+                    </div>
+                </div>
+
+                {/* SISTERS */}
+                <div style={styles.gifList}>
+                    <div style={styles.gifCell}>
+                        <Badge badgeContent={4} secondary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-ashley.gif"/>
+                        </Badge>
+                        <div>
+                            <h4 style={styles.gifFont}>ashley</h4>
+                        </div>
+                    </div>
+                    <div style={styles.gifCell}>
+                        <Badge badgeContent={3} secondary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-michelle.gif"/>
+                        </Badge>
+                        <div>
+                            <h4 style={styles.gifFont}>michelle</h4>
+                        </div>
+                    </div>
+                    <div style={styles.gifCell}>
+                        <Badge badgeContent={2} secondary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-christine.gif"/>
+                        </Badge>
+                        <div>
+                            <h4 style={styles.gifFont}>christine</h4>
+                        </div>
+                    </div>
+                    <div style={styles.gifCell}>
+                        <Badge badgeContent={3} secondary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-emily.gif"/>
+                        </Badge>
+                        <div>
+                            <h4 style={styles.gifFont}>emily</h4>
+                        </div>
+                    </div>
+                    <div style={styles.gifCell}>
+                        <Badge badgeContent={20} secondary={true}>
+                            <img style={styles.gif} src="src/images/gifs/androidify-carol.gif"/>
+                        </Badge>
+                        <div>
+                            <h4 style={styles.gifFont}>carol</h4>
                         </div>
                     </div>
                 </div>
