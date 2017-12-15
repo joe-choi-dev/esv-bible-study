@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
+import { Provider } from 'mobx-react';
 import DevTools from "mobx-react-devtools";
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -10,7 +11,7 @@ import TodoModel from "./models/TodoModel";
 import BibleBooks from "./components/BibleBooks";
 import BibleFlashcards from "./components/BibleFlashcards";
 import Home from "./components/Home";
-
+import globalStore from './GlobalStore';
 import MenuAppBar from "./components/material/MenuAppBar";
 
 import { createMuiTheme } from 'material-ui/styles';
@@ -33,14 +34,18 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <div>
-                    <MenuAppBar/>
-                    <Switch>
-                        <Route exact path='/' component={BibleBooks} />
-                        <Route path="/home" component={Home} />
-                        <Route path="/flashcards" component={BibleFlashcards} />
-                    </Switch>
-                </div>
+                <Provider globalStore={globalStore}>
+                    <MuiThemeProvider theme={theme}>
+                        <div>
+                            <MenuAppBar/>
+                            <Switch>
+                                <Route exact path='/' component={BibleBooks} />
+                                <Route path="/home" component={Home} />
+                                <Route path="/flashcards" component={BibleFlashcards} />
+                            </Switch>
+                        </div>
+                    </MuiThemeProvider>
+                </Provider>
             </div>
         );
     }
@@ -48,9 +53,7 @@ class App extends React.Component {
 
 ReactDOM.render(
     (<HashRouter>
-        <MuiThemeProvider theme={theme}>
-            <App />
-        </MuiThemeProvider>
+        <App />
     </HashRouter>),
     document.getElementById('root')
 );
