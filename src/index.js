@@ -7,27 +7,40 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TodoList from "./components/TodoList";
 import TodoListModel from "./models/TodoListModel";
 import TodoModel from "./models/TodoModel";
+import BibleBooks from "./components/BibleBooks";
+import BibleFlashcards from "./components/BibleFlashcards";
 import Home from "./components/Home";
-import AppBar from 'material-ui/AppBar';
-import HelloWorld from './components/HelloWorld'
+
+import MenuAppBar from "./components/material/MenuAppBar";
+
+import { createMuiTheme } from 'material-ui/styles';
+import lightBlue from 'material-ui/colors/lightBlue';
+import green from 'material-ui/colors/green';
+
+const theme = createMuiTheme({
+    palette: {
+        primary: lightBlue,
+        secondary: green,
+    },
+    status: {
+        danger: 'orange',
+    },
+});
+
 const store = new TodoListModel();
 
 class App extends React.Component {
     render() {
         return (
             <div>
-                <MuiThemeProvider>
-                    <div>
-                        <AppBar
-                            title="CMU Klesis"
-                            iconClassNameRight="muidocs-icon-navigation-expand-more"
-                        />
-                        <Switch>
-                            <Route exact path='/' component={Home} />
-                            <Route path="/hello" component={HelloWorld} />
-                        </Switch>
-                    </div>
-                </MuiThemeProvider>
+                <div>
+                    <MenuAppBar/>
+                    <Switch>
+                        <Route exact path='/' component={BibleBooks} />
+                        <Route path="/home" component={Home} />
+                        <Route path="/flashcards" component={BibleFlashcards} />
+                    </Switch>
+                </div>
             </div>
         );
     }
@@ -35,7 +48,9 @@ class App extends React.Component {
 
 ReactDOM.render(
     (<HashRouter>
-        <App />
+        <MuiThemeProvider theme={theme}>
+            <App />
+        </MuiThemeProvider>
     </HashRouter>),
     document.getElementById('root')
 );
