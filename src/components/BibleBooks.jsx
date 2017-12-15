@@ -33,7 +33,7 @@ class BibleBooks extends React.Component {
                                     <Typography className="Type">gospels</Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button dense>Study Chapter Headings</Button>
+                                    <Button dense onClick={() => this.props.history.push('/flashcards')}>Study Chapter Headings</Button>
                                     <Button dense>Study Key Verses</Button>
                                 </CardActions>
                             </Card>
