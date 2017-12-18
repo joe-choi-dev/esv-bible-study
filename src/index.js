@@ -5,14 +5,14 @@ import DevTools from "mobx-react-devtools";
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import TodoList from "./components/TodoList";
-import TodoListModel from "./models/TodoListModel";
-import TodoModel from "./models/TodoModel";
-import BibleBooks from "./components/BibleBooks";
-import BibleFlashcards from "./components/BibleFlashcards";
-import Home from "./components/Home";
-import globalStore from './GlobalStore';
-import MenuAppBar from "./components/material/MenuAppBar";
+// import TodoList from "./components/TodoList";
+// import TodoListModel from "./models/TodoListModel";
+// import TodoModel from "./models/TodoModel";
+import BibleBooks from "./components/BibleBooks.jsx";
+import BibleFlashcards from "./components/BibleFlashcards.jsx";
+import Home from "./components/Home.jsx";
+import globalStore from './GlobalStore.js';
+import MenuAppBar from "./components/material/MenuAppBar.jsx";
 
 import { createMuiTheme } from 'material-ui/styles';
 import lightBlue from 'material-ui/colors/lightBlue';
@@ -28,7 +28,7 @@ const theme = createMuiTheme({
     },
 });
 
-const store = new TodoListModel();
+// const store = new TodoListModel();
 
 class App extends React.Component {
     render() {
