@@ -33,8 +33,7 @@ module.exports = {
                         }
                     }
 
-                    res.json(titles);
-                    return titles;
+                    res.json({titles: titles});
                 } else {
                     if (response.statusCode) {
                         res.status(response.statusCode);
