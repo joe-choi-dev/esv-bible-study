@@ -109,7 +109,7 @@ class Home extends React.Component {
                 <div style={styles.gifList}>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={5} primary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-abe.gif"/>
+                            <img style={styles.gif} src="/public/images/androidify/androidify-1513185782106.png"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>abe</h4>
@@ -117,7 +117,7 @@ class Home extends React.Component {
                     </div>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={15} primary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-jordan.gif"/>
+                            <img style={styles.gif} src="public/images/gifs/androidify-jordan.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>jordan</h4>
@@ -125,7 +125,7 @@ class Home extends React.Component {
                     </div>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={3} primary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-joe.gif"/>
+                            <img style={styles.gif} src="public/images/gifs/androidify-joe.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>joe</h4>
@@ -133,7 +133,7 @@ class Home extends React.Component {
                     </div>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={2} primary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-bj.gif"/>
+                            <img style={styles.gif} src="public/images/gifs/androidify-bj.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>bj</h4>
@@ -141,7 +141,7 @@ class Home extends React.Component {
                     </div>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={5} primary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-sam.gif"/>
+                            <img style={styles.gif} src="public/images/gifs/androidify-sam.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>sam</h4>
@@ -149,7 +149,7 @@ class Home extends React.Component {
                     </div>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={20} primary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-jon.gif"/>
+                            <img style={styles.gif} src="public/images/gifs/androidify-jon.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>jon</h4>
@@ -161,7 +161,7 @@ class Home extends React.Component {
                 <div style={styles.gifList}>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={4} secondary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-ashley.gif"/>
+                            <img style={styles.gif} src="public/images/gifs/androidify-ashley.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>ashley</h4>
@@ -169,7 +169,7 @@ class Home extends React.Component {
                     </div>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={3} secondary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-michelle.gif"/>
+                            <img style={styles.gif} src="public/images/gifs/androidify-michelle.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>michelle</h4>
@@ -177,7 +177,7 @@ class Home extends React.Component {
                     </div>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={2} secondary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-christine.gif"/>
+                            <img style={styles.gif} src="public/images/gifs/androidify-christine.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>christine</h4>
@@ -185,7 +185,7 @@ class Home extends React.Component {
                     </div>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={3} secondary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-emily.gif"/>
+                            <img style={styles.gif} src="public/images/gifs/androidify-emily.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>emily</h4>
@@ -193,7 +193,7 @@ class Home extends React.Component {
                     </div>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={20} secondary={true}>
-                            <img style={styles.gif} src="src/images/gifs/androidify-carol.gif"/>
+                            <img style={styles.gif} src="public/images/gifs/androidify-carol.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>carol</h4>

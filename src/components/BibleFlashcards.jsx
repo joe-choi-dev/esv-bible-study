@@ -18,10 +18,15 @@ class BibleFlashcards extends React.Component {
 
     toggleCard() {
         this.props.globalStore.flashCardsStore.toggleCard();
+
     }
 
     closeCard() {
         this.props.globalStore.flashCardsStore.closeCard();
+    }
+
+    componentDidMount() {
+        this.props.globalStore.esv.getHeadings("Matthew5");
     }
 
     render() {
@@ -39,18 +44,9 @@ class BibleFlashcards extends React.Component {
                             <div style={{ padding: 20 }}/>
                             <Card className="Card" onClick={this.closeCard} style={{visibility: this.props.globalStore.flashCardsStore.isDefVisible}}>
                                 <CardContent>
-                                    <Typography type="headline" component="h2">The Sermon On The Mount,
-                                        The Beattitudes,
-                                        Salt and Light,
-                                        Christ Came to Fulfill the Law,
-                                        Anger,
-                                        Lust,
-                                        Divorce,
-                                        Oaths,
-                                        Retaliation,
-                                        Love Your Enemies
+                                    <Typography component="p">
+                                        {this.props.globalStore.esv.headings}
                                     </Typography>
-                                    <Typography className="Type">gospels</Typography>
                                 </CardContent>
                             </Card>
                         </Grid>
