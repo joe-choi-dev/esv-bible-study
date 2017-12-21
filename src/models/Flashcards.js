@@ -9,6 +9,8 @@ export class Flashcards {
     @observable keyVerses = [];
     @observable currCard = 1;
 
+    @observable currVerse = "1:1";
+
     @action setBook(title) {
         this.bookTitle = title;
     }
@@ -29,7 +31,14 @@ export class Flashcards {
         if (this.chptNumArray.size !== 0) {
             const x = this.chptNumArray.pop();
             this.currCard = x;
-            console.log(x);
+            return x;
+        }
+    }
+
+    @action nextVerse() {
+        if (this.keyVerses.size !== 0) {
+            const x = this.keyVerses.pop();
+            this.currVerse = x;
             return x;
         }
     }
@@ -44,6 +53,8 @@ export class Flashcards {
         } else if (bookTitle === "John") {
             this.keyVerses = ["1:1", "1:9", "1:12", "1:14", "3:16", "8:32", "10:10", "13:34", "14:1-3", "14:6", "14:15"];
         }
+        this.keyVerses = this.shuffle(this.keyVerses);
+        this.currVerse = this.keyVerses[0];
     }
 
     @action createChptNumArray(bookTitle) {

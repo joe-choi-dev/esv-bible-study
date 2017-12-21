@@ -23,13 +23,7 @@ class BibleBooks extends React.Component {
 
     constructor(props) {
         super(props);
-        // this.toggleCard = this.toggleCard.bind(this);
     }
-
-    // handleClick(bookTitle) {
-    //     this.props.globalStore.flashCardsStore.setBook(bookTitle);
-    //     this.props.history.push('/flashcards')
-    // }
 
     render() {
         return (
@@ -46,7 +40,9 @@ class BibleBooks extends React.Component {
                                     <Button dense onClick={() => {
                                         this.props.globalStore.flashCardsStore.setBook("Matthew");
                                         this.props.history.push('/flashcards')}}>Study Chapter Headings</Button>
-                                    <Button dense>Study Key Verses</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("Matthew");
+                                        this.props.history.push('/key_verses')}}>Study Key Verses</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -60,7 +56,9 @@ class BibleBooks extends React.Component {
                                     <Button dense onClick={() => {
                                         this.props.globalStore.flashCardsStore.setBook("Mark");
                                         this.props.history.push('/flashcards')}}>Study Chapter Headings</Button>
-                                    <Button dense>Study Key Verses</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("Mark");
+                                        this.props.history.push('/key_verses')}}>Study Key Verses</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -74,7 +72,9 @@ class BibleBooks extends React.Component {
                                     <Button dense onClick={() => {
                                         this.props.globalStore.flashCardsStore.setBook("Luke");
                                         this.props.history.push('/flashcards')}}>Study Chapter Headings</Button>
-                                    <Button dense>Study Key Verses</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("Luke");
+                                        this.props.history.push('/key_verses')}}>Study Key Verses</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -88,7 +88,9 @@ class BibleBooks extends React.Component {
                                     <Button dense onClick={() => {
                                         this.props.globalStore.flashCardsStore.setBook("John");
                                         this.props.history.push('/flashcards')}}>Study Chapter Headings</Button>
-                                    <Button dense>Study Key Verses</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("John");
+                                        this.props.history.push('/key_verses')}}>Study Key Verses</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
