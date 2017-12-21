@@ -6,7 +6,7 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
-import AccountCircle from 'material-ui-icons/AccountCircle';
+import GroupCircle from 'material-ui-icons/Group';
 import Switch from 'material-ui/Switch';
 import { FormControlLabel, FormGroup } from 'material-ui/Form';
 import Menu, { MenuItem } from 'material-ui/Menu';
@@ -34,9 +34,9 @@ class MenuAppBar extends React.Component {
         this.setState({ auth: checked });
     };
 
-    handleMenu = event => {
-        this.setState({ anchorEl: event.currentTarget });
-    };
+    // handleMenu = event => {
+    //     this.setState({ anchorEl: event.currentTarget });
+    // };
 
     handleRequestClose = () => {
         this.setState({ anchorEl: null });
@@ -59,9 +59,9 @@ class MenuAppBar extends React.Component {
                 {/*</FormGroup>*/}
                 <AppBar position="static">
                     <Toolbar>
-                        <IconButton className={classes.menuButton} color="contrast" aria-label="Menu">
-                            <MenuIcon />
-                        </IconButton>
+                        {/*<IconButton className={classes.menuButton} color="contrast" aria-label="Menu">*/}
+                            {/*<MenuIcon />*/}
+                        {/*</IconButton>*/}
                         <Typography type="title" color="inherit" className={classes.flex}>
                             CMU Bible Study
                         </Typography>
@@ -70,28 +70,28 @@ class MenuAppBar extends React.Component {
                                 <IconButton
                                     aria-owns={open ? 'menu-appbar' : null}
                                     aria-haspopup="true"
-                                    onClick={this.handleMenu}
+                                    onClick={console.log("take me home")}
                                     color="contrast"
                                 >
-                                    <AccountCircle />
+                                    <GroupCircle />
                                 </IconButton>
-                                <Menu
-                                    id="menu-appbar"
-                                    anchorEl={anchorEl}
-                                    anchorOrigin={{
-                                        vertical: 'top',
-                                        horizontal: 'right',
-                                    }}
-                                    transformOrigin={{
-                                        vertical: 'top',
-                                        horizontal: 'right',
-                                    }}
-                                    open={open}
-                                    onRequestClose={this.handleRequestClose}
-                                >
-                                    <MenuItem onClick={this.handleRequestClose}>Profile</MenuItem>
-                                    <MenuItem onClick={this.handleRequestClose}>My account</MenuItem>
-                                </Menu>
+                                {/*<Menu*/}
+                                    {/*id="menu-appbar"*/}
+                                    {/*anchorEl={anchorEl}*/}
+                                    {/*anchorOrigin={{*/}
+                                        {/*vertical: 'top',*/}
+                                        {/*horizontal: 'right',*/}
+                                    {/*}}*/}
+                                    {/*transformOrigin={{*/}
+                                        {/*vertical: 'top',*/}
+                                        {/*horizontal: 'right',*/}
+                                    {/*}}*/}
+                                    {/*open={open}*/}
+                                    {/*onRequestClose={this.handleRequestClose}*/}
+                                {/*>*/}
+                                    {/*<MenuItem onClick={this.handleRequestClose}>Profile</MenuItem>*/}
+                                    {/*<MenuItem onClick={this.handleRequestClose}>My account</MenuItem>*/}
+                                {/*</Menu>*/}
                             </div>
                         )}
                     </Toolbar>
