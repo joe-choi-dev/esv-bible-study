@@ -109,7 +109,7 @@ class Home extends React.Component {
                 <div style={styles.gifList}>
                     <div style={styles.gifCell}>
                         <Badge badgeContent={5} primary={true}>
-                            <img style={styles.gif} src="/public/images/androidify/androidify-1513185782106.png"/>
+                            <img style={styles.gif} src="/public/images/gifs/androidify-abe.gif"/>
                         </Badge>
                         <div>
                             <h4 style={styles.gifFont}>abe</h4>

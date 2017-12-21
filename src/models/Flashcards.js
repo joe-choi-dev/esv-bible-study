@@ -3,10 +3,15 @@ import {action, observable} from 'mobx';
 
 export class Flashcards {
 
+    @observable bookTitle = "Mark";
     @observable isDefVisible = 'none';
     @observable chptNumArray = [];
     @observable keyVerses = [];
     @observable currCard = 1;
+
+    @action setBook(title) {
+        this.bookTitle = title;
+    }
 
     @action toggleCard() {
         if (this.isDefVisible === 'inherit') {
