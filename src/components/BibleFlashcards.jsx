@@ -41,14 +41,10 @@ class BibleFlashcards extends React.Component {
         this.props.globalStore.flashCardsStore.closeCard();
     }
 
-    // componentDidMount() {
-    //     this.props.globalStore.esv.getHeadings("Matthew"+this.props.globalStore.flashCardsStore.currCard);
-    // }
-
     render() {
         this.props.globalStore.esv.getHeadings("Matthew"+this.props.globalStore.flashCardsStore.currCard);
-        return (
-            <div>
+        if (this.props.globalStore.flashCardsStore.currCard) {
+            return (
                 <div style={{ padding: 20 }}>
                     <Grid container spacing={40} alignItems="center" direction="column" justify="flex-start" >
                         <Grid item xs={10} md={6} style={{width: "100%"}}>
@@ -80,8 +76,16 @@ class BibleFlashcards extends React.Component {
                         </Grid>
                     </Grid>
                 </div>
-            </div>
-        );
+            );
+        } else {
+            return (
+                <div style={{ padding: 20 }}>
+                    <h1>
+                        DONE
+                    </h1>
+                </div>
+            );
+        }
     }
 
 }

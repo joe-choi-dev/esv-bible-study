@@ -9,8 +9,7 @@ export class Esv {
             '/api/esv/headings?q='+q
         ).then(response => response.json())
             .then(res => {
-                console.log(res)
-                this.headings = res.titles.join();
+                this.headings = res.titles.join(', ');
                 return res;
             })
     }
