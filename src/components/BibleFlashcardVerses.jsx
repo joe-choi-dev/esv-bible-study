@@ -24,13 +24,13 @@ class BibleFlashcards extends React.Component {
         this.toggleCard = this.toggleCard.bind(this);
         this.closeCard = this.closeCard.bind(this);
         this.nextCard = this.nextCard.bind(this);
-        this.props.globalStore.flashCardsStore.createChptNumArray(this.props.globalStore.flashCardsStore.bookTitle);
+        this.props.globalStore.flashCardsStore.createKeyVersesArray(this.props.globalStore.flashCardsStore.bookTitle);
         this.closeCard();
-        // this.props.globalStore.flashCardsStore.createKeyVersesArray("Matthew");
+
     }
 
     nextCard() {
-        this.props.globalStore.flashCardsStore.nextCard();
+        this.props.globalStore.flashCardsStore.nextVerse();
         this.closeCard();
     }
 
@@ -43,9 +43,9 @@ class BibleFlashcards extends React.Component {
     }
 
     render() {
-        this.props.globalStore.esv.getHeadings(this.props.globalStore.flashCardsStore.bookTitle
-            +this.props.globalStore.flashCardsStore.currCard);
-        if (this.props.globalStore.flashCardsStore.currCard) {
+        this.props.globalStore.esv.getVerses(this.props.globalStore.flashCardsStore.bookTitle
+            +this.props.globalStore.flashCardsStore.currVerse);
+        if (this.props.globalStore.flashCardsStore.currVerse) {
             return (
                 <div style={{ padding: 20 }}>
                     <Grid container spacing={40} alignItems="center" direction="column" justify="flex-start" >
@@ -54,7 +54,7 @@ class BibleFlashcards extends React.Component {
                                 <CardContent>
                                     <Typography type="headline" component="h2">{this.props.globalStore.flashCardsStore.bookTitle
                                     + " "
-                                    + this.props.globalStore.flashCardsStore.currCard}</Typography>
+                                    + this.props.globalStore.flashCardsStore.currVerse}</Typography>
                                     <Typography className="Type">gospels</Typography>
                                 </CardContent>
                             </Card>
@@ -62,7 +62,7 @@ class BibleFlashcards extends React.Component {
                             <Card className="Card" onClick={this.closeCard} style={{display: this.props.globalStore.flashCardsStore.isDefVisible}}>
                                 <CardContent>
                                     <Typography component="p">
-                                        {this.props.globalStore.esv.headings}
+                                        {this.props.globalStore.esv.verses}
                                     </Typography>
                                 </CardContent>
                             </Card>

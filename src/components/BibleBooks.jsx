@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { observable, action } from "mobx";
-import { observer } from "mobx-react";
+import { inject, observer } from "mobx-react";
 import Grid from 'material-ui/Grid';
 
 import Card, { CardActions, CardContent } from 'material-ui/Card';
@@ -18,8 +18,12 @@ const styles = theme => ({
     },
 });
 
-@observer
+@inject("globalStore") @observer
 class BibleBooks extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return (
@@ -33,8 +37,12 @@ class BibleBooks extends React.Component {
                                     <Typography className="Type">gospels</Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button dense onClick={() => this.props.history.push('/flashcards')}>Study Chapter Headings</Button>
-                                    <Button dense>Study Key Verses</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("Matthew");
+                                        this.props.history.push('/flashcards')}}>Study Chapter Headings</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("Matthew");
+                                        this.props.history.push('/key_verses')}}>Study Key Verses</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -45,8 +53,12 @@ class BibleBooks extends React.Component {
                                     <Typography className="Type">gospels</Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button dense>Study Chapter Headings</Button>
-                                    <Button dense>Study Key Verses</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("Mark");
+                                        this.props.history.push('/flashcards')}}>Study Chapter Headings</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("Mark");
+                                        this.props.history.push('/key_verses')}}>Study Key Verses</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -57,8 +69,12 @@ class BibleBooks extends React.Component {
                                     <Typography className="Type">gospels</Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button dense>Study Chapter Headings</Button>
-                                    <Button dense>Study Key Verses</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("Luke");
+                                        this.props.history.push('/flashcards')}}>Study Chapter Headings</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("Luke");
+                                        this.props.history.push('/key_verses')}}>Study Key Verses</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -69,8 +85,12 @@ class BibleBooks extends React.Component {
                                     <Typography className="Type">gospels</Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button dense>Study Chapter Headings</Button>
-                                    <Button dense>Study Key Verses</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("John");
+                                        this.props.history.push('/flashcards')}}>Study Chapter Headings</Button>
+                                    <Button dense onClick={() => {
+                                        this.props.globalStore.flashCardsStore.setBook("John");
+                                        this.props.history.push('/key_verses')}}>Study Key Verses</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
