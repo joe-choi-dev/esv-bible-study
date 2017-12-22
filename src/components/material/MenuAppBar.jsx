@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
@@ -62,7 +63,11 @@ class MenuAppBar extends React.Component {
                         {/*<IconButton className={classes.menuButton} color="contrast" aria-label="Menu">*/}
                             {/*<MenuIcon />*/}
                         {/*</IconButton>*/}
-                        <Typography type="title" color="inherit" className={classes.flex}>
+                        <Typography
+                            type="title"
+                            color="inherit"
+                            onClick={() => {window.location.href = '/'}}
+                            className={classes.flex}>
                             CMU Bible Study
                         </Typography>
                         {auth && (
@@ -70,9 +75,8 @@ class MenuAppBar extends React.Component {
                                 <IconButton
                                     aria-owns={open ? 'menu-appbar' : null}
                                     aria-haspopup="true"
-                                    onClick={console.log("take me home")}
-                                    color="contrast"
-                                >
+                                    onClick={() => {window.location.href = '/#/home'}}
+                                    color="contrast">
                                     <GroupCircle />
                                 </IconButton>
                                 {/*<Menu*/}
@@ -105,4 +109,4 @@ MenuAppBar.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(MenuAppBar);
+export default withRouter(withStyles(styles)(MenuAppBar));

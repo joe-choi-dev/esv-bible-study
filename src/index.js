@@ -31,6 +31,11 @@ class App extends React.Component {
                 <Provider globalStore={globalStore}>
                     <MuiThemeProvider theme={theme}>
                         <div>
+                            <style>
+                                {
+                                    document.getElementsByTagName("body")[0].style.margin = 0
+                                }
+                            </style>
                             <MenuAppBar/>
                             <Switch>
                                 <Route exact path='/' component={BibleBooks} />
