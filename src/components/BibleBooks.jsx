@@ -30,7 +30,7 @@ class BibleBooks extends React.Component {
             <div>
                 <div style={{ padding: 20 }}>
                     <Grid container spacing={40} alignItems="center" direction="row" justify="center" >
-                        <Grid item xs={6}>
+                        <Grid item xs={12} md={6}>
                             <Card className="Card">
                                 <CardContent>
                                     <Typography type="headline" component="h2">Matthew</Typography>
@@ -46,7 +46,7 @@ class BibleBooks extends React.Component {
                                 </CardActions>
                             </Card>
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={12} md={6}>
                             <Card className="Card">
                                 <CardContent>
                                     <Typography type="headline" component="h2">Mark</Typography>
@@ -62,7 +62,7 @@ class BibleBooks extends React.Component {
                                 </CardActions>
                             </Card>
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={12} md={6}>
                             <Card className="Card">
                                 <CardContent>
                                     <Typography type="headline" component="h2">Luke</Typography>
@@ -78,7 +78,7 @@ class BibleBooks extends React.Component {
                                 </CardActions>
                             </Card>
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={12} md={6}>
                             <Card className="Card">
                                 <CardContent>
                                     <Typography type="headline" component="h2">John</Typography>

@@ -94,67 +94,67 @@ class Home extends React.Component {
         return (
             <div style={styles.gifList}>
                 <Grid container spacing={40} alignItems="center" direction="row" justify="center" >
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-abe.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>abe</h4>
                         </div>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-jordan.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>jordan</h4>
                         </div>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-joe.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>joe</h4>
                         </div>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-bj.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>bon jin</h4>
                         </div>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-sam.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>sam</h4>
                         </div>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-jon.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>jon</h4>
                         </div>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-emily.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>emily</h4>
                         </div>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-christine.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>christine</h4>
                         </div>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-michelle.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>michelle</h4>
                         </div>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-ashley.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>ashley</h4>
                         </div>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={6} md={2}>
                         <img style={styles.gif} src="/public/images/gifs/androidify-carol.gif"/>
                         <div>
                             <h4 style={styles.gifFont}>carol</h4>
