@@ -14,6 +14,10 @@ Supports ES6 and JSX compilation through babel.
 ```
 npm install
 npm start
+
+npm install
+npm run build
+npm run start
 ```
 
 Browser should open automatically. Otherwise, navigate to the URL reported in the terminal
